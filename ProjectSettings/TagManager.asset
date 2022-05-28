@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - Box
+  - Rope
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Rope
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 1844556961
+    locked: 0
+  - name: Ground
+    uniqueID: 1683832023
+    locked: 0
+  - name: Enemy
+    uniqueID: 2944293881
+    locked: 0
+  - name: Item
+    uniqueID: 2019854415
+    locked: 0
+  - name: Player
+    uniqueID: 3406758175
+    locked: 0
+  - name: FowardGround
+    uniqueID: 2555947851
+    locked: 0
