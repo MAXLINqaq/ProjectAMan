@@ -10,6 +10,14 @@ public class Shoot : MonoBehaviour
 
     private float time;
     private List<GameObject> list = new List<GameObject>();
+    public enum FireMode{
+        Single = 0,
+        Double = 1,
+        Multiple = 3
+    }
+    public FireMode fireMode = FireMode.Single;
+    bool isTrig;
+    int bulletCap;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +29,30 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if(Input.GetButton("Fire1")&& time > coolTime){
+        if(Input.GetButtonDown("Fire1")){
+            isTrig = true;
+            switch(fireMode){
+                case FireMode.Single:{
+                    bulletCap = 1;
+                    break;
+                }
+                case FireMode.Double:{
+                    bulletCap = 2;
+                    break;
+                }
+                case FireMode.Multiple:{
+                    bulletCap = int.MaxValue;
+                    break;
+                }
+            }
+        }
+        else if(Input.GetButtonUp("Fire1")){
+            isTrig = false;
+        }
+        if(isTrig && bulletCap > 0 && time > coolTime){
             Fire();
             time = 0;
+            bulletCap --;
         }
     }
     private void Fire()
